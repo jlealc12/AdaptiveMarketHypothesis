@@ -10,7 +10,7 @@ library(mice)
 rm(list=ls())
 #save.image("TesisPaperSpain")
 
-#save.image("Paper Rita Results")
+#save.image("Paper RRRR Results")
 {
   print(Sys.time())
   #paises=c("INDIA","INDONESIA","KOREA","MALAYSIA","PAKISTAN","PHILIPPINES","TAIWAN","THAILAND","CHINA",
@@ -32,7 +32,7 @@ rm(list=ls())
                "Peru","Colombia","Chile","Argentina" )
       ventana=c(24,30,36)
       range1="a2:b265"
-      path1=("C:\\Users\\jaime\\OneDrive\\Escritorio\\Udem\\PaperRita\\Data\\MonthlyData.xlsx")
+      path1=("C:\\Users\\XXXX\\OneDrive\\Escritorio\\school\\PaperRRRR\\Data\\MonthlyData.xlsx")
       color.grafica="blue"
       
       vas.o.novas.movil.monthly=matrix(ncol = 3, nrow = length(paises))
@@ -48,7 +48,7 @@ rm(list=ls())
       paises=c("LATAM","Brazil","Mexico","Peru","Colombia","Chile","Argentina","Portugal","Spain")
       ventana=c(100,200,300)
       range1="a2:b5741"
-      path1=("C:\\Users\\jaime\\OneDrive\\Escritorio\\Udem\\PaperRita\\Data\\DailyData.xlsx")
+      path1=("C:\\Users\\XXXX\\OneDrive\\Escritorio\\school\\PaperRRRR\\Data\\DailyData.xlsx")
       color.grafica="red"
       
       vas.o.novas.movil.daily=matrix(ncol = 3, nrow = length(paises))
@@ -65,7 +65,7 @@ rm(list=ls())
     #############
     
     for(s in 1:length(ventana)){
-      pdf(paste("C:\\Users\\jaime\\OneDrive\\Escritorio\\Udem\\PaperRita\\MyPlots\\",tipo,prueba[v],ventana[s],".pdf"), width = 10,height = 10)
+      pdf(paste("C:\\Users\\XXXX\\OneDrive\\Escritorio\\school\\PaperRRRR\\MyPlots\\",tipo,prueba[v],ventana[s],".pdf"), width = 10,height = 10)
       retornos.pais=NA
       datos.pais.1=NA
       for(i in 1:length(paises)){
@@ -89,8 +89,8 @@ rm(list=ls())
         if(is.na(retornos.pais)==TRUE)retornos.pais=retornos.pais.2
       }
       
-      if(prueba[v]=="Monthly")fecha= read_excel("C:\\Users\\jaime\\OneDrive\\Escritorio\\Udem\\PaperRita\\Data\\MonthlyData.xlsx",
-                                                sheet = paises[i], range = "A2:A265", col_names = FALSE) else fecha= read_excel("C:\\Users\\jaime\\OneDrive\\Escritorio\\Udem\\PaperRita\\Data\\DailyData.xlsx",
+      if(prueba[v]=="Monthly")fecha= read_excel("C:\\Users\\XXXX\\OneDrive\\Escritorio\\school\\PaperRRRR\\Data\\MonthlyData.xlsx",
+                                                sheet = paises[i], range = "A2:A265", col_names = FALSE) else fecha= read_excel("C:\\Users\\XXXX\\OneDrive\\Escritorio\\school\\PaperRRRR\\Data\\DailyData.xlsx",
                                                                                                                                 sheet = paises[i], range = "A2:A5741", col_names = FALSE)
       
       
